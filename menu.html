@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <link rel="stylesheet" type="text/css" href="cs.css">
+              
+        <script type="text/javascript">
+            
+	function getmenu(){
+              var menu = document.getElementById("menu");
+              var result = document.getElementById("result");
+result.innerHTML=menu.value;
+        }
+        </script>
+        <style>
+            #result{
+                background-color: wheat;
+                display: inline-block;
+                border: 1px solid black;
+                color:black;
+                font-size: 30px;
+                font-style: serif;
+            }
+            #d{
+                font-style: red serifs;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="wrapper">
+            <div class="nav">
+                <ul>
+                     <li><a href="coffee shop.html">HOME</a></li>
+                    <li><a href="order.html">ORDER</a></li>
+                    <li><a href="location.html">lOCATION</a></li>
+                   <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+           
+        	<div>
+            <div id="d"><h1>COFFEE SHOP</h1></div>
+            <h3>MENU ITEMS</h3><br>
+                
+                 <form>
+                      SELECT YOUR ORDER:<select id="menu" onchange="getmenu()">
+                        
+                      <option value="latte">latte</option>
+                        <option value="cappucinno">cappuccino</option>
+                        <option value="espresso">espresso</option>
+                        <option value="flatwhite">flatwhite</option>
+                        <option value="irish">irish</option>
+                        <option value="macchitato">macchitato</option>
+                        <option value="longblack">long black</option>
+                        <option value="double expresso">double expresso</option>
+                        <option value="cafelatte">cafe latte</option>
+                        <option value="vienna">vienna</option>
+                        <option value="affogato">affogato</option>
+                    </select><br><br><br>
+                    
+                
+                    YOUR ORDER IS:<div id="result"></div><br>
+                
+                 </form>
+       
+</div>
+                 <button class="btn"><a href="order.html">ORDER HERE</a>
+                
+            </button>
+    </body>
+</html>

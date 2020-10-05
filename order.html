@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="cs.css">
+    </head>
+    <body>
+                <div class="wrapper">
+            <div class="nav">
+                <ul>
+                     <li><a href="coffee shop.html">HOME</a></li>
+                    <li><a href="order.html">ORDER</a></li>
+                    <li><a href="location.html">lOCATION</a></li>
+                   <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+           
+	<div class='start'>
+                <h1>COFFEE ORDER</h1>
+                <form>
+                    <fieldset>
+                        <legend>Enter Order Details</legend>
+                        No of coffees : <input type='text' id='small' pattern='[0-9]*'><br>
+                        Income tax: <input type='text' value="Rs.12.56" pattern='[0-9]*'><br>
+                        maintanance tax: <input type='text' value="RS.20" pattern='[0-9]*'><br>
+                        <br>
+                        Tip :<input type='radio' name='tip' value="0">0%&nbsp;
+                        <input type='radio' name='tip' value="10">10%&nbsp;
+                        <input type='radio' name='tip' value='15' checked>15%&nbsp;
+                        <input type='radio' name='tip' value='20'>20%<br>
+                        <input type='button' id='sub' value='Calculate Order'>
+                    </fieldset>
+                </form>
+                Total Cost of Order : <span id='tot'></span>
+            </div>
+                 <button class="btn"><a href="thanks.html">PAY</a>
+                
+            </button>
+            
+        
+        <script>
+            
+	document.getElementById('sub').addEventListener('click',function(){
+               var sm=parseFloat(document.getElementById('small').value);
+              var tip=parseFloat(document.querySelector('input[name="tip"]:checked').value);
+               var tot = (sm*50)+12.56+20;
+               tot = (tot*(tip/100))+tot;
+               document.getElementById('tot').innerHTML='Rs.'+tot;
+               
+            });
+        </script>
+    </body>
+</html>
